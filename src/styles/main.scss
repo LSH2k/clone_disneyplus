@@ -1,5 +1,7 @@
 @use 'variaveis';
 @use 'hero';
+@use 'shows';
+@use 'plans';
 
 @font-face {
     font-family: Avenir;
@@ -63,4 +65,25 @@ body {
 
 .title--small {
     @include title(28px);
+}
+
+.button {
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    font-size: 18px;
+    color: variaveis.$corTextoSecundario;
+    background-color: #6421ff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+    border: none;
+
+    &:hover {
+        background-color: lighten(#6421ff, 4%);
+    }
 }
